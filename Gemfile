@@ -21,6 +21,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 
+# Authentication
+gem 'devise'
+gem 'doorkeeper'
+gem 'oauth2', '~> 1.2'
+
 # Serialization
 gem 'active_model_serializers'
 
