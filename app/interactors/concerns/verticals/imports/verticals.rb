@@ -9,6 +9,8 @@ module Verticals
       def call
         extract_all_files
         import_verticals_data
+        # Can be Add logic for shift to Batches in case data is large
+        # YieldInBatches.call(collection: verticals, block: ->(batch) { import_verticals_data })
       end
 
       private
