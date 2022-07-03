@@ -1,11 +1,11 @@
 module Api
   module V1
     module Verticals
-      class Create < BaseInteraction
-
+      class Update < BaseInteraction
         def execute
-          vertical = Vertical.new(vertical_params)
-          if vertical.save
+          return errors.add(:base, 'Unable to find vertical') if vertical.blank?
+
+          if vertical.update(vertical_params)
             vertical
           else
             errors.add(:base, vertical.errors.full_messages.to_sentence)
@@ -13,6 +13,10 @@ module Api
         end
 
         private
+
+        def vertical
+          @vertical ||= Vertical.find_by(id: params[:id])
+        end
 
         def vertical_params
           params.require(:vertical).permit(:name, categories_attributes: categories_attributes)

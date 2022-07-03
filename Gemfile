@@ -28,6 +28,7 @@ gem 'active_model_serializers'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'elasticsearch-rails'
 gem 'elasticsearch-model'
+gem  'elasticsearch', "< 7.14"
 gem 'elasticsearch-persistence'
 gem 'active_interaction'
 gem "interactor"
