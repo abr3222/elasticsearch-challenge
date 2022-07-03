@@ -69,3 +69,8 @@ access.token
 ```bigquery
 GET http://localhost:3000/api/v1/verticals?access_token=1S1OZk8hXDin2Ko2Lb34-fqBgIIERWUtwu8wdYdU6vA
 ```
+
+## Postman Collection
+1. Import the Postman Collection using follwing link 
+https://www.getpostman.com/collections/52e790b350cc9abd9f33
+2. Chose Oauth2 and set Set Access in above step.
